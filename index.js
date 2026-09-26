@@ -62,7 +62,7 @@ app.use(errorHandler)
 
 // Hadii developent-ga aan joogno use the local one 'Mongo_uri_dev', hadii kale use the online one 'mongo_uri_pro'
 mongoose 
-    .connect(process.env.NODE_ENV == "developement" ? process.env.MONGO_URI_DEV : process.env.MONGO_URI_PRO)
+    .connect(process.env.NODE_ENV == "development" ? process.env.MONGO_URI_DEV : process.env.MONGO_URI_PRO)
     .then(()=> {
         console.log('MongoDB connected');
         
