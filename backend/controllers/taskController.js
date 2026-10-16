@@ -16,7 +16,8 @@ export const createTask = async (req, res, next) => {
 export const getMyTasks = async (req, res, next) => {
   try {
     // waxadku raadisaa user-ka qadka ku jira
-    const tasks = await Task.find({ createdBy: req.user._id });
+    // .sort({ createdAt: -1})= bu kisim backend iyo frotend isku xirkooda ayay ku saabsan tahy. wuxu naga caawinaa in newTask ugu dambeeyay aan create ku sameenay inuu qofka 1aad ka dhigo
+    const tasks = await Task.find({ createdBy: req.user._id }).sort({ createdAt: -1})
     res.json(tasks);
   } catch (err) {
     next(err);

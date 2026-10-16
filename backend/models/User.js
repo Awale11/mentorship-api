@@ -58,3 +58,6 @@ export default User;
 // async function tamamlanır
 //     ↓
 // save devam eder
+
+// this.isModified('password')
+// Password sadece ilk oluşturulurken veya gerçekten değiştirildiğinde hashleniyor. Böylece mevcut hash'in tekrar hashlenmesini engelliyoruz

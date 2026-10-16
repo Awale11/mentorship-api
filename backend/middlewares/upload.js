@@ -1,6 +1,7 @@
 import multer from "multer";
 
 // we use our computer's memory
+// Dosya diske kaydedilmiyor. Dosya RAM/buffer olarak tutuluyor
 const storage = multer.memoryStorage();
 
 // bu middleware this appload ayuu noosamaynaa

@@ -23,7 +23,7 @@ export const register = async (req, res, next)=> {
 
         // after creating email, we pass token  
         const token = generateToken(user._id)
-        res.status(201).json({ token })
+        res.status(201).json({ token, user })
 
     } catch (err) {
         // hadii qalad dhaco global error-ka ayan usii gudbinayna asaa nooso sheegayo markee cilada jirto
@@ -55,3 +55,13 @@ export const login = async (req, res, next)=> {
         next(err)
     }
 }
+
+// export const register = async (req, res) => {
+//     // user oluştur
+// };
+
+// export const login = async (req, res) => {
+//     // user bul
+//     // password kontrol et
+//     // JWT oluştur
+// };
