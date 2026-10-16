@@ -2,7 +2,7 @@
 import axios from "axios";
 import useAuthStore from "../store/authStore";
 
-const API_URL = 'https://mentorship-api-xdc1.onrender.com';
+const API_URL = 'https://mentorship-api-xdc1.onrender.com/api'
 
 const api = axios.create({
     baseURL: API_URL,
